@@ -1,0 +1,49 @@
+﻿@model List<Ebook.Models.Book>
+
+@{
+    ViewData["Title"] = "Book List";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Book List</h2>
+    <div class="d-flex justify-content-end">
+    <a asp-action="create" class="btn btn-primary">
+        <span class="me-2">+</span> Add
+    </a>
+    </div>
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Id</td>
+                        <td>@book.Name</td>
+                        <td>@book.Author</td>
+                        <td>@book.Isbn</td>
+                        <td><a asp-action="Detail" asp-route-id="@book.Id"> 👁️ </a>
+                            <a asp-action="Edit" asp-route-id="@book.Id" title="Edit">✏️</a>
+                            <a asp-action="Delete" asp-route-id="@book.Id" title="Delete">🗑️</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            No books available.
+        </div>
+    }
+</div>

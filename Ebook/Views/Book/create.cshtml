@@ -1,0 +1,20 @@
+﻿@model Book
+<div class="container mt-5">
+    <h2 class="mb-4">Add a Book</h2>
+    <form asp-action="create" method="post">
+        <div class="mb-3">
+            <label for="bookName" class="form-label">Book Name</label>
+            <input type="text" class="form-control" id="bookName" name="name" asp-for="Name" placeholder="Enter book name">
+        </div>
+        <div class="mb-3">
+            <label for="authorName" class="form-label">Author</label>
+            <input type="text" class="form-control" id="authorName" name="author" asp-for="Author" placeholder="Enter author name">
+        </div>
+        <div class="mb-3">
+            <label for="isbn" class="form-label">ISBN</label>
+            <input type="text" class="form-control" id="isbn" name="isbn" asp-for="Isbn" placeholder="Enter ISBN">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
