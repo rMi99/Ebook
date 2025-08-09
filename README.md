@@ -1,4 +1,3 @@
-````markdown
 # 📚 Ebook Management System
 
 An **ASP.NET Core 8.0** web application for managing ebooks with full **CRUD functionality** (Create, Read, Update, Delete).  
@@ -120,6 +119,4 @@ Ebook/
 
 💡 **Author:** [Ramisha](https://github.com/rMi99)
 📧 For issues or questions, open a GitHub issue or contact me.
-
-```
 
